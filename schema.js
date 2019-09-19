@@ -1,11 +1,11 @@
-import { graphql,GraphQLSchema, GraphQLObjectType, GraphQLString } from 'graphql';
+var graphqlObj = require('graphql');
 
-var schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
+var schema = new graphqlObj.GraphQLSchema({
+  query: new graphqlObj.GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
       hello: {
-        type: GraphQLString,
+        type: graphqlObj.GraphQLString,
         resolve() {
           return 'world';
         },
